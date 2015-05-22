@@ -5,7 +5,7 @@
 #include "usbdrv.h"
 #include "avr/interrupt.h"
 
-#include "../../../../../libraries/GnusbuinoMIDI/src/GnusbuinoMIDI.h"	// not very clean, I know
+#include "../../../../../libraries/MIDICocoMake7/src/MIDICocoMake7.h"	// not very clean, I know
 
 // ------------------------------------------------------------------------------
 // - Status Leds
