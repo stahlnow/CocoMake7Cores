@@ -4,6 +4,7 @@
 
   Copyright (c) 2007 David A. Mellis
   2012 Michael Egger
+  2015 Christoph Stähli
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -23,8 +24,7 @@
   $Id: wiring.h 249 2007-02-03 16:52:51Z mellis $
 */
 
-
-// ATMEL ATTINY84 / COCOMAKE7
+// ATMEL ATTINY84 / COCOMAKE7 USB
 //
 //                   __  __
 //            VCC  1|° \/  |14  GND
@@ -39,21 +39,7 @@
 #ifndef Pins_Arduino_h
 #define Pins_Arduino_h
 
-
 #include <avr/pgmspace.h>
-
-#define NUM_DIGITAL_PINS            11
-#define NUM_ANALOG_INPUTS           6
-#define analogInputToDigitalPin(p)  (p)
-#define digitalPinHasPWM(p)         ((p==5) || (p==6)) || (p==7) || (p==8))
-static const uint8_t SS   = 7; // ???
-static const uint8_t MOSI = 6;
-static const uint8_t MISO = 5;
-static const uint8_t SCK  = 4;
-
-static const uint8_t SDA = 6;
-static const uint8_t SCL = 4;
-static const uint8_t LED_BUILTIN = 8;
 
 static const uint8_t A0 = 0;
 static const uint8_t A1 = 1;
@@ -70,34 +56,32 @@ static const uint8_t A7 = 7;
 #define digitalPinToPCMSK(p)    ( ((p) <= 7) ? (&PCMSK0) : (((p) <= 10) ? (&PCMSK1) : ((uint8_t *)0)) )
 #define digitalPinToPCMSKbit(p) ( ((p) <= 7) ? (p) : (10 - (p)) )
 
+
 #ifdef ARDUINO_MAIN
 
 
-#define PB 1
-
-
 const uint16_t PROGMEM port_to_mode_PGM[] = {
-	NOT_A_PORT,
+    NOT_A_PORT,
     (uint8_t) &DDRA,
-	(uint8_t) &DDRB,
+    (uint8_t) &DDRB,
 };
 
 const uint16_t PROGMEM port_to_output_PGM[] = {
-	NOT_A_PORT,
+    NOT_A_PORT,
     (uint8_t) &PORTA,
-	(uint8_t) &PORTB,
+    (uint8_t) &PORTB,
 };
 
 const uint16_t PROGMEM port_to_input_PGM[] = {
-	NOT_A_PORT,
+    NOT_A_PORT,
     (uint8_t) &PINA,
-	(uint8_t) &PINB,
+    (uint8_t) &PINB,
 };
 
 const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
-	// PORTLIST
-	// -------------------------------------------
-	PA, // 0
+    // PORTLIST
+    // -------------------------------------------
+    PA, // 0
     PA,
     PA,
     PA,
@@ -112,9 +96,9 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
 
 //ok
 const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
-	// PIN IN PORT
-	// -------------------------------------------
-	_BV(0), // port A
+    // PIN IN PORT
+    // -------------------------------------------
+    _BV(0), // port A
     _BV(1),
     _BV(2),
     _BV(3),
@@ -129,9 +113,9 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 
 //ok
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
-	// TIMERS
-	// -------------------------------------------
-	NOT_ON_TIMER,
+    // TIMERS
+    // -------------------------------------------
+    NOT_ON_TIMER,
     NOT_ON_TIMER,
     NOT_ON_TIMER,
     NOT_ON_TIMER,

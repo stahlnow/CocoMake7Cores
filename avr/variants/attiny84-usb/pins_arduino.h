@@ -4,6 +4,7 @@
 
   Copyright (c) 2007 David A. Mellis
   2012 Michael Egger
+  2015 Christoph Stähli
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -23,7 +24,6 @@
   $Id: wiring.h 249 2007-02-03 16:52:51Z mellis $
 */
 
-
 // ATMEL ATTINY84 / COCOMAKE7 USB
 //
 //                   __  __
@@ -39,22 +39,7 @@
 #ifndef Pins_Arduino_h
 #define Pins_Arduino_h
 
-
 #include <avr/pgmspace.h>
-
-#define NUM_DIGITAL_PINS            9
-#define NUM_ANALOG_INPUTS           6
-#define analogInputToDigitalPin(p)  (p)
-#define digitalPinHasPWM(p)         ((p==5) || (p==8))
-
-static const uint8_t SS   = 7; // ???
-static const uint8_t MOSI = 6;
-static const uint8_t MISO = 5;
-static const uint8_t SCK  = 4;
-
-static const uint8_t SDA = 6;
-static const uint8_t SCL = 4;
-static const uint8_t LED_BUILTIN = 8;
 
 static const uint8_t A0 = 0;
 static const uint8_t A1 = 1;
@@ -73,9 +58,6 @@ static const uint8_t A7 = 7;
 
 
 #ifdef ARDUINO_MAIN
-
-
-#define PB 1
 
 
 const uint16_t PROGMEM port_to_mode_PGM[] = {
