@@ -32,8 +32,8 @@
 //    9  XTAL PB1  3|      |12  PA1  A1  1
 //       RST  PB3  4|      |11  PA2  A2  2
 //   ~8       PB2  5|      |10  PA3  A3  3
-//   ~7  USB- PA7  6|      |9   PA4  A4  4
-//   ~6  USB+ PA6  7|      |8   PA5  A5  5~
+//   ~7       PA7  6|      |9   PA4  A4  4
+//   ~6       PA6  7|      |8   PA5  A5  5~
 //                   ------
 
 #ifndef Pins_Arduino_h
@@ -45,7 +45,7 @@
 #define NUM_DIGITAL_PINS            11
 #define NUM_ANALOG_INPUTS           8
 #define analogInputToDigitalPin(p)  (p)
-#define digitalPinHasPWM(p)         ((p==5) || (p==8))  // (p==6)) || (p==7)
+#define digitalPinHasPWM(p)         ((p==5) || (p==8)) || (p==6)) || (p==7)
 
 static const uint8_t SS   = 7; // could also be 2
 static const uint8_t MOSI = 6;
