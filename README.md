@@ -20,7 +20,7 @@ CocoMake7 boards are programmed via ISP (In-System-Programming).
 
 If you don't have an ISP programmer, you can use an arduino as ISP.
 
-![arduino_as_isp](http://hackteria.org/wiki/File:Programming-attiny44-attiny84-with-arduino-uno.png "arduino_as_isp")
+![arduino_as_isp](/../documentation/documentation/Programming-attiny44-attiny84-with-arduino-uno.png?raw=true "arduino_as_isp")
 
 ## Boards
 
