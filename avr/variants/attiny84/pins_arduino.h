@@ -43,11 +43,10 @@
 #include <avr/pgmspace.h>
 
 #define NUM_DIGITAL_PINS            11
-#define NUM_ANALOG_INPUTS           8
+#define NUM_ANALOG_INPUTS           6
 #define analogInputToDigitalPin(p)  (p)
-#define digitalPinHasPWM(p)         ((p==5) || (p==8)) || (p==6)) || (p==7)
-
-static const uint8_t SS   = 7; // could also be 2
+#define digitalPinHasPWM(p)         ((p==5) || (p==6)) || (p==7) || (p==8))
+static const uint8_t SS   = 7; // ???
 static const uint8_t MOSI = 6;
 static const uint8_t MISO = 5;
 static const uint8_t SCK  = 4;
@@ -65,6 +64,11 @@ static const uint8_t A5 = 5;
 static const uint8_t A6 = 6;
 static const uint8_t A7 = 7;
 
+
+#define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 10) ? (&GIMSK) : ((uint8_t *)0) )
+#define digitalPinToPCICRbit(p) ( ((p) <= 7) ? PCIE0 : PCIE1 )
+#define digitalPinToPCMSK(p)    ( ((p) <= 7) ? (&PCMSK0) : (((p) <= 10) ? (&PCMSK1) : ((uint8_t *)0)) )
+#define digitalPinToPCMSKbit(p) ( ((p) <= 7) ? (p) : (10 - (p)) )
 
 #ifdef ARDUINO_MAIN
 
