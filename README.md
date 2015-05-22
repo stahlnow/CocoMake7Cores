@@ -6,12 +6,7 @@ There are three different kind of CocoMake7 boards: CocoMake7, KeysCocoMake7 and
 
 ## Installation
 
-* Download the zip file and unpack it into the hardware folder of your arduino sketchbook folder.
-The resulting folder structure should be something like ~/your-sketchbook-folder/hardware/MIDICocoMake7Cores-master
-Alternatively you can do a
-    git pull https://github.com/CocoMake7/CocoMake7Cores.git
-
-inside the sketchbook/hardware folder.
+* Download the zip file and unpack it into the hardware folder of your arduino sketchbook folder. The resulting folder structure should be something like ~/your-sketchbook-folder/hardware/MIDICocoMake7Cores-master
 
 * Install the [CocoMake7](https://github.com/CocoMake7/CocoMake7) library.
 
