@@ -1,10 +1,9 @@
-
+menu.clock=Clock
 ##############################################################
 
 cm.name=CocoMake7
 
 cm.upload.tool=arduino:avrdude
-#cm.upload.protocol=usbasp
 cm.upload.maximum_size=8192
 cm.upload.speed=9600
 cm.upload.disable_flushing=true
@@ -17,10 +16,27 @@ cm.bootloader.high_fuses=0xDF
 cm.bootloader.extended_fuses=0xFF
 
 cm.build.mcu=attiny84
-cm.build.f_cpu=8000000L
 cm.build.board=AVR_CM
 cm.build.core=arduino:arduino
 cm.build.variant=attiny84
+
+cm.menu.clock.internal1=1 MHz (internal)
+cm.menu.clock.internal1.bootloader.low_fuses=0x62
+cm.menu.clock.internal1.bootloader.high_fuses=0xdf
+cm.menu.clock.internal1.bootloader.extended_fuses=0xff
+cm.menu.clock.internal1.build.f_cpu=1000000L
+
+cm.menu.clock.internal8=8 MHz (internal)
+cm.menu.clock.internal8.bootloader.low_fuses=0xe2
+cm.menu.clock.internal8.bootloader.high_fuses=0xdf
+cm.menu.clock.internal8.bootloader.extended_fuses=0xff
+cm.menu.clock.internal8.build.f_cpu=8000000L
+
+cm.menu.clock.external16=16 MHz (external)
+cm.menu.clock.external16.bootloader.low_fuses=0xff
+cm.menu.clock.external16.bootloader.high_fuses=0xdf
+cm.menu.clock.external16.bootloader.extended_fuses=0xff
+cm.menu.clock.external16.build.f_cpu=16000000L
 
 
 ##############################################################
@@ -28,7 +44,6 @@ cm.build.variant=attiny84
 mcm.name=MIDICocoMake7
 
 mcm.upload.tool=arduino:avrdude
-#mcm.upload.protocol=usbasp
 mcm.upload.maximum_size=8192
 mcm.upload.speed=9600
 mcm.upload.disable_flushing=true
@@ -44,6 +59,6 @@ mcm.build.mcu=attiny84
 mcm.build.f_cpu=16000000L
 mcm.build.board=AVR_MCM
 mcm.build.core=midicocomake7
-mcm.build.variant=attiny84
+mcm.build.variant=attiny84-usb
 
 ##############################################################
