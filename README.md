@@ -22,29 +22,19 @@ If you don't have an ISP programmer, you can use an arduino as ISP.
 ![arduino_as_isp](/../documentation/documentation/Programming-attiny44-attiny84-with-arduino-uno.png?raw=true "arduino_as_isp")
 
 ## Pinout
-
+```
 // ATMEL ATTINY84 / COCOMAKE7 USB
-
 //
-
 //                   __  __
-
 //            VCC  1|° \/  |14  GND
-
 //   10  XTAL PB0  2|      |13  PA0  A0  0
-
 //    9  XTAL PB1  3|      |12  PA1  A1  1
-
 //       RST  PB3  4|      |11  PA2  A2  2
-
 //   ~8       PB2  5|      |10  PA3  A3  3
-
 //   ~7  USB+ PA7  6|      |9   PA4  A4  4
-
 //   ~6  USB- PA6  7|      |8   PA5  A5  5~
-
 //                   ------
-
+```
 ## Example sketch
 
 
