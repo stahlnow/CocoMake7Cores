@@ -28,8 +28,8 @@ section at the end of this file).
 /* ---------------------------- Hardware Config ---------------------------- */
 #if defined(__AVR_ATtiny84__)
 	#define USB_CFG_IOPORTNAME      A
-	#define USB_CFG_DMINUS_BIT      7
-	#define USB_CFG_DPLUS_BIT       6
+	#define USB_CFG_DMINUS_BIT      6
+	#define USB_CFG_DPLUS_BIT       7
 	#define USB_CFG_CLOCK_KHZ       (F_CPU/1000)
 	#define USB_CFG_CHECK_CRC       0
 	//#define USB_CFG_PULLUP_IOPORTNAME   B

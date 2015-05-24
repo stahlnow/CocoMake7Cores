@@ -32,8 +32,8 @@
 //    9  XTAL PB1  3|      |12  PA1  A1  1
 //       RST  PB3  4|      |11  PA2  A2  2
 //   ~8       PB2  5|      |10  PA3  A3  3
-//   ~7  USB- PA7  6|      |9   PA4  A4  4
-//   ~6  USB+ PA6  7|      |8   PA5  A5  5~
+//   ~7  USB+ PA7  6|      |9   PA4  A4  4
+//   ~6  USB- PA6  7|      |8   PA5  A5  5~
 //                   ------
 
 #ifndef Pins_Arduino_h
