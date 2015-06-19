@@ -179,7 +179,9 @@ void adInit(void){
     ADCSRB &= ~(1 << ADLAR);        // set to right-adjusted result
 
     // Set ADC Reference Voltage to AVCC
+    #if defined(__AVR_ATtiny84__)
 	ADMUX = 0;
+    #endif
 }
 
 

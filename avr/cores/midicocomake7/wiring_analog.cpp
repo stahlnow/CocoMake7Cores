@@ -48,11 +48,13 @@ void analogReference(uint8_t mode)
 
 int analogRead(uint8_t pin)
 {
-	// we don't allow analog read on USB pins
-	if (pin == 9 || pin == 10) { return -1; }
+	// we don't allow analog read on crystal and USB pins
+	if (pin == 6 || pin == 7) { return -1; }
 
 	DDRA &= ~(1 << pin);                                            // set pin to input
+    #if defined(__AVR_ATtiny84__)
  	ADMUX = (ADMUX & ~ADC_MUX_MASK) | (pin & ADC_MUX_MASK);		// set channel
+    #endif
 
 	// start the conversion
 	ADCSRA |= (1 << ADIF);			// clear hardware "conversion complete" flag
