@@ -62,3 +62,25 @@ mcm.build.core=midicocomake7
 mcm.build.variant=attiny84-usb
 
 ##############################################################
+
+kcm.name=KeysCocoMake7
+
+kcm.upload.tool=arduino:avrdude
+kcm.upload.maximum_size=8192
+kcm.upload.speed=9600
+kcm.upload.disable_flushing=true
+
+kcm.bootloader.tool=arduino:avrdude
+kcm.bootloader.unlock_bits=0xff
+kcm.bootloader.lock_bits=0xff
+kcm.bootloader.low_fuses=0xFF
+kcm.bootloader.high_fuses=0xDF
+kcm.bootloader.extended_fuses=0xFF
+
+kcm.build.mcu=attiny84
+kcm.build.f_cpu=16000000L
+kcm.build.board=AVR_KCM
+kcm.build.core=keyscocomake7
+kcm.build.variant=attiny84-usb
+
+##############################################################
