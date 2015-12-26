@@ -1,5 +1,5 @@
 # CocoMake7
-A jugaad ultra low-cost clone to the Makey Makey, but based on QTouchADC sensing, local manufacturing and coconuts.
+A jugaad and low-cost educational platform for digital interactivity, compatible with Makey Makey (TM), but based on QTouchADC sensing, local manufacturing and coconuts.
 It's based on the ATMEL ATtiny84 and arduino IDE compatible.
 
 There are three different kind of CocoMake7 boards: CocoMake7, KeysCocoMake7 and MIDICocoMake7. The MIDI core is based on the babygnusbuino by a.n.y.m.a.
